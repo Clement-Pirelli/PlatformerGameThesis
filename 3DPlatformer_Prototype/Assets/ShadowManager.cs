@@ -21,7 +21,7 @@ public class ShadowManager : MonoBehaviour
     public void ChangeShadowType(SHADOWTYPE p_type)
     {
         if (currentType == p_type)    //if it's the same then dont do anything
-        {
+        {    
             return;
         }
 
