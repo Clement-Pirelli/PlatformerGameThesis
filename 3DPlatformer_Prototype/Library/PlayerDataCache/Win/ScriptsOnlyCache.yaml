@@ -9,7 +9,10 @@ ScriptsOnlyBuild:
     - vThirdPersonCamera
     Assembly-CSharp.dll:
     - ButtonEvents
+    - MovingPlatformBehavior
     - ShadowManager
+    - StandTrigger
+    - TeleportTrigger
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -28,7 +31,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/SampleScene 1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -86,13 +89,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10802}
     - Class: 114
-      Script: {instanceID: 11096}
+      Script: {instanceID: 11026}
     - Class: 114
-      Script: {instanceID: 11300}
+      Script: {instanceID: 11098}
     - Class: 114
-      Script: {instanceID: 11500}
+      Script: {instanceID: 11116}
     - Class: 114
-      Script: {instanceID: 11690}
+      Script: {instanceID: 11304}
+    - Class: 114
+      Script: {instanceID: 11504}
+    - Class: 114
+      Script: {instanceID: 11630}
+    - Class: 114
+      Script: {instanceID: 11696}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 119
@@ -828,6 +837,12 @@ ScriptsOnlyBuild:
     className: Water
   - hash:
       serializedVersion: 2
+      Hash: cc541ac80a37939e8e9f2a1ef9624fe1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TeleportTrigger
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -892,6 +907,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: 
     className: AlphaButtonClickMask
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StandTrigger
   - hash:
       serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
@@ -1062,7 +1083,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 349eaa5508aaed97a472f2984ecae632
+      Hash: 4efaefd26d2c8f06c6fb5250cdc3c17f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShadowManager
@@ -1114,6 +1135,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: bd6e48e2bf6df089f0c3189783b373ff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MovingPlatformBehavior
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -1206,6 +1233,6 @@ ScriptsOnlyBuild:
     className: AutoMobileShaderSwitch
   platform: 5
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Study/Course/Year 3/Degree project/GamePrototype_2/PlatformerGameThesis/Executable
-    4_1/3dTesting.exe
+  - Assets/Scenes/SampleScene 1.unity
+  playerPath: D:/Study/Course/Year 3/Degree project/Prototype_1/PlatformerGameThesis/Executable
+    4_4/3dTesting.exe

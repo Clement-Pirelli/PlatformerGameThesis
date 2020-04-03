@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\纯黑\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_3DPlatformer_Prototype.292399748.00" t="ExcludeRecursive" />
-    <e p="D:\Study\Course\Year 3\Degree project\GamePrototype_2\PlatformerGameThesis\3DPlatformer_Prototype" t="IncludeRecursive">
+    <e p="C:\Users\纯黑\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_3DPlatformer_Prototype.-564910797.00" t="ExcludeRecursive" />
+    <e p="D:\Study\Course\Year 3\Degree project\Prototype_1\PlatformerGameThesis\3DPlatformer_Prototype" t="IncludeRecursive">
       <e p="3DPlatformer_Prototype.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="ButtonEvents.cs" t="Include" />
+        <e p="MovingPlatformBehavior.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="FastShadowProjector" t="Include">
             <e p="Editor" t="Include">
@@ -356,7 +356,12 @@
             </e>
           </e>
         </e>
-        <e p="ShadowManager.cs" t="Include" />
+        <e p="Sprites" t="Include">
+          <e p="ButtonEvents.cs" t="Include" />
+          <e p="ShadowManager.cs" t="Include" />
+        </e>
+        <e p="StandTrigger.cs" t="Include" />
+        <e p="TeleportTrigger.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
