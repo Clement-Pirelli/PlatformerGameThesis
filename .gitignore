@@ -18,7 +18,7 @@
 /3DPlatformer_Prototype/[Bb]uilds/
 /3DPlatformer_Prototype/[Ll]ogs/
 /3DPlatformer_Prototype/[Mm]emoryCaptures/
-
+/3DPlatformer_Prototype/.idea/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
