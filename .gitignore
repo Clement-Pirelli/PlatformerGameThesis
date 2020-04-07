@@ -10,6 +10,16 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
+
+/3DPlatformer_Prototype/[Ll]ibrary/
+/3DPlatformer_Prototype/[Tt]emp/
+/3DPlatformer_Prototype/[Oo]bj/
+/3DPlatformer_Prototype/[Bb]uild/
+/3DPlatformer_Prototype/[Bb]uilds/
+/3DPlatformer_Prototype/[Ll]ogs/
+/3DPlatformer_Prototype/[Mm]emoryCaptures/
+/3DPlatformer_Prototype/.idea/
+
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
@@ -57,4 +67,5 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
 
