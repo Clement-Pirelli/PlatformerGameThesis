@@ -11,11 +11,28 @@ public struct LevelInfo
     public string levelName;
     public int timesJumped;
     public int timesFell;
+
+    public LevelInfo(float p_secondsSpent, string p_levelName,int p_timesJumped, int p_timesFell)
+    {
+        this.secondsSpent = p_secondsSpent;
+        this.levelName = p_levelName;
+        this.timesJumped = p_timesJumped;
+        this.timesFell = p_timesFell;
+    }
 }
 
 public struct LogInfo 
 {
     public float totalTime;
+    public int totalJumps;
+    public int totalFells;
+
+    public LogInfo(float p_totalTime, int p_totalJumps, int p_totalFells)
+    {
+        totalTime = p_totalTime;
+        totalJumps = p_totalJumps;
+        totalFells = p_totalFells;
+    }
 }
 
 public class Logger

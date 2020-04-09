@@ -9,6 +9,7 @@ public class FallOffTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             CheckPointManager.instance.ResetPlayerPosition();
+            DataCollector.instance.AddDeathCounter();
         }
     }
 }
