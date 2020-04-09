@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System;
 
 [System.Serializable]
 public struct LevelInfo 
@@ -19,15 +20,18 @@ public struct LogInfo
 
 public class Logger
 {
-    public static void WriteLog(string path, LogInfo info)
+    public static void WriteLog(string name, LogInfo info)
     {
-        StreamWriter writer;
-        //write to the file
-        writer = new StreamWriter(path);
-
+        string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), name);
+        StreamWriter writer = new StreamWriter(path, append: true);
         float totalTime = .0f;
 
-        foreach(var levelInfo in info.levels) 
+
+        writer.WriteLine();
+
+        writer.WriteLine($"Playthrough at {DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt")}");
+
+        foreach (var levelInfo in info.levels) 
         {
             totalTime += levelInfo.secondsSpent;
 
@@ -42,8 +46,6 @@ public class Logger
         writer.WriteLine("-----------------------------------------------");
         writer.WriteLine();
         writer.WriteLine($"Total time spent : {totalTime} seconds");
-        
-        
         
         //close file otherwise other applications won't be able to use it
         writer.Close();
