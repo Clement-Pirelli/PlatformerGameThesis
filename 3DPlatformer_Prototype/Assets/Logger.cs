@@ -15,39 +15,50 @@ public struct LevelInfo
 
 public struct LogInfo 
 {
-    public LevelInfo[] levels;
+    public float totalTime;
 }
 
 public class Logger
 {
-    public static void WriteLog(string name, LogInfo info)
+    public static void WriteEndLog(string name, LogInfo info)
     {
         string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), name);
         StreamWriter writer = new StreamWriter(path, append: true);
-        float totalTime = .0f;
 
+        writer.WriteLine("-----------------------------------------------");
+        writer.WriteLine();
+        writer.WriteLine($"Total time spent : {info.totalTime} seconds");
+        
+        //close file otherwise other applications won't be able to use it
+        writer.Close();
+    }
+
+
+    public static void WriteStartLog(string name) 
+    {
+        string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), name);
+        StreamWriter writer = new StreamWriter(path, append: true);
 
         writer.WriteLine();
 
         writer.WriteLine($"Playthrough at {DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt")}");
 
-        foreach (var levelInfo in info.levels) 
-        {
-            totalTime += levelInfo.secondsSpent;
+        writer.Close();
+    }
 
-            writer.WriteLine($"Level name: {levelInfo.levelName}");
-            writer.WriteLine($"Player jumped: {levelInfo.timesJumped} times");
-            writer.WriteLine($"Time spent in the level: {levelInfo.secondsSpent} seconds");
-            writer.WriteLine($"Player fell: {levelInfo.timesFell} times");
+    public static void writeLevelLog(string name, LevelInfo info)
+    {
+        string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), name);
+        StreamWriter writer = new StreamWriter(path, append: true);
 
-            writer.WriteLine();
-        }
 
-        writer.WriteLine("-----------------------------------------------");
+        writer.WriteLine($"Level name: {info.levelName}");
+        writer.WriteLine($"Player jumped: {info.timesJumped} times");
+        writer.WriteLine($"Time spent in the level: {info.secondsSpent} seconds");
+        writer.WriteLine($"Player fell: {info.timesFell} times");
+
         writer.WriteLine();
-        writer.WriteLine($"Total time spent : {totalTime} seconds");
-        
-        //close file otherwise other applications won't be able to use it
+
         writer.Close();
     }
 }
