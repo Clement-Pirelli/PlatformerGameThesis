@@ -44,7 +44,9 @@ public class Logger
 
         writer.WriteLine("-----------------------------------------------");
         writer.WriteLine();
-        writer.WriteLine($"Total time spent : {info.totalTime} seconds");
+        writer.WriteLine($"Total time spent : {info.totalTime} seconds\n");
+        writer.WriteLine($"Total time jumped : {info.totalJumps} times\n");
+        writer.WriteLine($"Total time fell : {info.totalFells} times");
         
         //close file otherwise other applications won't be able to use it
         writer.Close();
