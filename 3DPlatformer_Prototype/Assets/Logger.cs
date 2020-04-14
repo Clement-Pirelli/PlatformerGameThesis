@@ -26,12 +26,14 @@ public struct LogInfo
     public float totalTime;
     public int totalJumps;
     public int totalFells;
+    public SHADOWTYPE shadowSolution;
 
-    public LogInfo(float p_totalTime, int p_totalJumps, int p_totalFells)
+    public LogInfo(float p_totalTime, int p_totalJumps, int p_totalFells, SHADOWTYPE shadow)
     {
         totalTime = p_totalTime;
         totalJumps = p_totalJumps;
         totalFells = p_totalFells;
+        shadowSolution = shadow;
     }
 }
 
@@ -44,6 +46,7 @@ public class Logger
 
         writer.WriteLine("-----------------------------------------------");
         writer.WriteLine();
+        writer.WriteLine($"Shadow solution: {info.shadowSolution}\n");
         writer.WriteLine($"Total time spent : {info.totalTime} seconds\n");
         writer.WriteLine($"Total time jumped : {info.totalJumps} times\n");
         writer.WriteLine($"Total time fell : {info.totalFells} times");

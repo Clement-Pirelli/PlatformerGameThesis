@@ -77,7 +77,7 @@ public class DataCollector : MonoBehaviour
         
         if (p_level == LEVEL.DIFFICULT)
         {
-            Logger.WriteEndLog(m_fileName, new LogInfo(m_TotalTimeSpent, m_TotalTimesJumped, m_TotalTimesFallen));
+            Logger.WriteEndLog(m_fileName, new LogInfo(m_TotalTimeSpent, m_TotalTimesJumped, m_TotalTimesFallen, ShadowManager.instance.currentType));
         }
     }
 }

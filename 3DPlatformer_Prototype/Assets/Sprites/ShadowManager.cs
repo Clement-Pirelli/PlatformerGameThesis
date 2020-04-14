@@ -20,7 +20,18 @@ public class ShadowManager : MonoBehaviour
 
     public LayerMask m_includePlayer;
     public LayerMask m_excludePlayer;
+
+    public static ShadowManager instance;
+
+    public ShadowSolutionStorer storer;
     
+    private void Start()
+    {
+        instance = this;
+
+        ChangeShadowType(storer.startType);
+    }
+
     //Entrance method to change the shadow type
     public void ChangeShadowType(SHADOWTYPE p_type)
     {
