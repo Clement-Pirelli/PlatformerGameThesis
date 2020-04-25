@@ -39,6 +39,15 @@ public struct LogInfo
 
 public class Logger
 {
+    public static void Write(string name, string content)
+    {
+        string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), name);
+        StreamWriter writer = new StreamWriter(path, append: true);
+
+        writer.WriteLine(content);
+        writer.Close();
+    }
+    
     public static void WriteEndLog(string name, LogInfo info)
     {
         string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), name);

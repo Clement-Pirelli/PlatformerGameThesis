@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonEvents : MonoBehaviour
 {
     public ShadowManager m_shadowManager;
     public ShadowSolutionStorer storer;
+
+    public Text name;
+    public Text proficiency;
     
     //The Onclick of button doesn't take enum, which I have to use the extra step....
     public void ChangeShadowType(string p_type)
@@ -27,6 +31,9 @@ public class ButtonEvents : MonoBehaviour
     
     public void GameStart(string shadowtype)
     {
+        Logger.Write("Result", "Tester name: " + name.text);
+        Logger.Write("Result", "Tester 3D platformer proficiency: " + proficiency.text);
+        
         SceneManager.LoadScene("GameScene");
 
         switch (shadowtype)
